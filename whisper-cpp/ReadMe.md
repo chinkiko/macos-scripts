@@ -11,14 +11,6 @@ ffmpeg -i INPUT.mp4 -ar 16000 -c:a pcm_s16le OUTPUT.wav
 whisper-cpp -f "$mp4_file.wav" -t 20 -otxt -osrt -m ~/codes/whisper.cpp/models/ggml-base.en.bin
 ```
 
-## rename srt
-```
-for f in *.mp4.wav.srt; do
-    mv "$f" "${f//.wav/}"
-done
-```
-
-
 ### whisper-cpp_mp4ai.sh
 ```
 # Set the directory containing your mp4 files
