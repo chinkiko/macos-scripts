@@ -1,15 +1,16 @@
-# Set the directory containing your mp4 files
-mp4_dir=$1
-mp4_dir=${mp4_dir//\"/}
+# Set the mp4 files
+mp4_files=$@
 
-# Loop through each mp4 file in the directory
-for i in "$mp4_dir"/*.mp4; do
-    mp4_file=${i##*/} # Extract the file name
-    mp4_file="$mp4_dir/$mp4_file"
-    echo Processing: $mp4_file
+# Loop through each mp4 file
+for mp4_file in $mp4_files; do
+    mp4_file=${mp4_file//\"/}
+
+    # Process the mp4 file
+    mp4_file_name=${mp4_file##*/} # Extract the file name
+    echo Processing: $mp4_file_name
 
     # extra audio
-    ffmpeg -i "$mp4_file" -vn -acodec copy "$mp4_file.aac"
+    # ffmpeg -i "$mp4_file" -vn -acodec copy "$mp4_file.aac"
 
     ffmpeg -i "$mp4_file" \
         -hide_banner \
@@ -19,12 +20,10 @@ for i in "$mp4_dir"/*.mp4; do
         -ac 1 \
         -c:a pcm_s16le \
         -y \
-        "$mp4_file.wav"
+        "$mp4_file_name.wav"
 
-    whisper-cpp -f "$mp4_file.wav" -t 20 -otxt -osrt -m ~/codes/whisper.cpp/models/ggml-base.en.bin
-done
+    whisper-cpp -f "$mp4_file_name.wav" -p 4 -t 20 -otxt -osrt -l en -m ~/codes/_OpenAI_/ggml-base.en.bin
 
-
-for f in *.mp4.wav.srt; do
-    mv "$f" "${f//.wav/}"
+    # Rename the output file
+    mv "$mp4_file_name.wav.srt" "$mp4_file_name.srt"
 done
