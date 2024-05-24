@@ -1,6 +1,11 @@
-### 自定义修改
+### 参考
  https://github.com/sugood/hammerspoon
  
+ https://github.com/zuorn/hammerspoon_config
+
+
+----
+sugood配置更改
 - commons.lua
 ```
 { title = "Reload config", fn = function() hs.reload()   end },
