@@ -7,3 +7,12 @@ Thanks to Bill for his many contributions to the Mac community over the years, p
 
 See also: UI Browser 4.0.0.
 https://github.com/alldritt/UIBrowser4
+
+
+----
+
+You can still download version 3, and I've just discovered that you can continue to "extend" your free trial indefinitely by deleting the .plist file located in
+```
+ls -la ~/library/logs/
+rm ~/library/logs/K6J1GI(IkG.plist
+```
