@@ -1,8 +1,7 @@
-- https://github.com/sugood/hammerspoon
-```
--- 自定义修改
-
-commons.lua
+### 自定义修改
+ https://github.com/sugood/hammerspoon
+ 
+- commons.lua
 ```
 { title = "Reload config", fn = function() hs.reload()   end },
         { title = "Open console", fn = function() hs.openConsole() end },
@@ -18,15 +17,17 @@ commons.lua
 -- 注释,不用  { title = "输入appSecret", fn = function()
 -- 注释,不用  { title = "时间同步：" .. config[1].isSyncTime, fn = function()
 ```
- dict.lua
+
+- dict.lua
 ```
 function initData()
 -- disable ALL function, 特别是对CMD+Opt+V键的绑定
 -- 注释掉整个函数   hs.eventtap.keyStroke({ "cmd" }, "V")
 end
 ```
-systeminfo.lua
-``
+
+- systeminfo.lua
+```
 --  local canvas = hs.canvas.new{x = 0, y = 0, h = 24, w = 30+30+30+60}
     local canvas = hs.canvas.new{x = 0, y = 0, h = 24, w = 30+30+60}
 -- 删除硬盘读写
