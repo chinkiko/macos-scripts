@@ -20,7 +20,7 @@ https://github.com/sugood/hammerspoon
 ```
 ALOGO=""
 MNAME="MBP"
-PROMPT="%{$fg_bold[cyan]%}%T  %{$fg_bold[green]%}%d
+PROMPT="%{$fg_bold[cyan]%}%T  %{$terminfo[bold]$fg[yellow]%}%~
 %{$fg_bold[white]%}#$ALOGO%{$fg_bold[white]%}%n %{$reset_color%} "
 ```
 ```
