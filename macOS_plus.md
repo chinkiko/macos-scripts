@@ -18,9 +18,10 @@ https://github.com/sugood/hammerspoon
 ### oh-zsh-theme
 - jtriley_apple.zsh-theme
 ```
-LOGO=""
-PROMPT="%{$fg_bold[cyan]%}%T %{$fg_bold[white]%}%n %{$fg[magenta]%}@ %{$fg_bold[white]%}$LOGO %{$fg_bold[green]%}%d
-%{$fg_bold[yellow]%}# %{$reset_color%} "
+ALOGO=""
+MNAME="MBP"
+PROMPT="%{$fg_bold[cyan]%}%T %{$fg_bold[white]%}%n%{$fg[magenta]%}@%{$fg_bold[white]%}$MNAME %{$fg_bold[green]%}%d
+%{$fg_bold[white]%}#$ALOGO%{$reset_color%} "
 ```
 ```
 # ~/.zshrc
