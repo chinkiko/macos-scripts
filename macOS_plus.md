@@ -20,8 +20,8 @@ https://github.com/sugood/hammerspoon
 ```
 ALOGO=""
 MNAME="MBP"
-PROMPT="%{$fg_bold[cyan]%}%T %{$fg_bold[white]%}%n%{$fg[magenta]%}@%{$fg_bold[white]%}$MNAME %{$fg_bold[green]%}%d
-%{$fg_bold[white]%}#$ALOGO%{$reset_color%} "
+PROMPT="%{$fg_bold[cyan]%}%T  %{$fg_bold[green]%}%d
+%{$fg_bold[white]%}#$ALOGO%{$fg_bold[white]%}%n %{$reset_color%} "
 ```
 ```
 # ~/.zshrc
